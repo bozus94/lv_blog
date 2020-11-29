@@ -14,6 +14,7 @@ window.Vue = require("vue");
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+Vue.component("app", require("./components/AppComponent.vue"));
 Vue.component("posts", require("./components/PostsComponent.vue"));
 Vue.component("InfiniteLoading", require("vue-infinite-loading"));
 
