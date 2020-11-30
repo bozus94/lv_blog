@@ -26,9 +26,13 @@
       </div>
       <div class="navbar navbar-dark bg-dark shadow-sm">
         <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
+          <router-link
+            :to="{ name: 'home' }"
+            href="#"
+            class="navbar-brand d-flex align-items-center"
+          >
             <strong>Blog LaraVue </strong>
-          </a>
+          </router-link>
           <button
             class="navbar-toggler collapsed"
             type="button"
@@ -45,7 +49,7 @@
     </header>
 
     <transition name="slide-fade" mode="out-in">
-      <router-view></router-view>
+      <router-view :key="$route.fullPath"></router-view>
     </transition>
   </div>
 </template>

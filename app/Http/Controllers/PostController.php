@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        return Post::orderBy('id', 'DESC')->paginate();
+        return Post::orderBy('id', 'DESC')->paginate(16);
     }
     public function show($slug)
     {
